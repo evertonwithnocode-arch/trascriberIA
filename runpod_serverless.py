@@ -10,6 +10,7 @@ async def handler(event):
         return {"error": "Nenhuma URL recebida."}
 
     req = YouTubeRequest(url=url)
+
     response = await transcribe_video(req)
     return jsonable_encoder(response)
 
